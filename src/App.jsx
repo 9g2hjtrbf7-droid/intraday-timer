@@ -19,7 +19,7 @@ const CATEGORIES = {
   "eComm/Consumo": ["MELI","NKE","KO","MCD","PG","NFLX"],
   "Energía": ["VST","OKLO","COPX"],
   "ETFs": ["GLD","IWM"],
-  "Otros": ["BNG"],
+  "Otros": ["BG"],
 };
 
 // ── KNOWN TICKERS ─────────────────────────────────────────────────────────────
@@ -70,7 +70,7 @@ const KNOWN = {
   ADBE:{desc:"Adobe Inc.",beta:1.30,liq:"alta",sector:"tech",avgVol:4},
   CRM:{desc:"Salesforce Inc.",beta:1.25,liq:"alta",sector:"tech",avgVol:5},
   MA:{desc:"Mastercard Inc.",beta:1.05,liq:"alta",sector:"fintech",avgVol:4},
-  BNG:{desc:"BNG (activo genérico)",beta:1.20,liq:"media",sector:"general",avgVol:5},
+  BG:{desc:"BG (activo genérico)",beta:1.20,liq:"media",sector:"general",avgVol:5},
   NKE:{desc:"Nike Inc.",beta:1.05,liq:"alta",sector:"consumer",avgVol:7},
   NFLX:{desc:"Netflix Inc.",beta:1.30,liq:"media",sector:"streaming",avgVol:4},
   META:{desc:"Meta Platforms Inc.",beta:1.22,liq:"alta",sector:"tech",avgVol:18},
@@ -471,7 +471,7 @@ const BASE = {
   GLD:{ color:"#b45309", ...generateProfile("GLD") },
   IWM:{ color:"#374151", ...generateProfile("IWM") },
   // Otros
-  BNG:{ color:"#374151", ...generateProfile("BNG") },
+  BG:{ color:"#374151", ...generateProfile("BG") },
 };
 
 // ── HELPERS ───────────────────────────────────────────────────────────────────
@@ -1019,8 +1019,8 @@ export default function App(){
   { id:50, ticker:"GLD", type:"sell", cond:"composite_sell", scoreThreshold:null, condLabel:"VENTA: score≤36 + SAR bajista ≥8 velas alcistas previas", enabled:true, fired:false, firedAt:null },
   { id:51, ticker:"IWM", type:"buy",  cond:"composite_buy",  scoreThreshold:null, condLabel:"COMPRA: score≥68 + SAR alcista ≥2 velas + franja ok", enabled:true, fired:false, firedAt:null },
   { id:52, ticker:"IWM", type:"sell", cond:"composite_sell", scoreThreshold:null, condLabel:"VENTA: score≤36 + SAR bajista ≥8 velas alcistas previas", enabled:true, fired:false, firedAt:null },
-  { id:53, ticker:"BNG", type:"buy",  cond:"composite_buy",  scoreThreshold:null, condLabel:"COMPRA: score≥68 + SAR alcista ≥2 velas + franja ok", enabled:true, fired:false, firedAt:null },
-  { id:54, ticker:"BNG", type:"sell", cond:"composite_sell", scoreThreshold:null, condLabel:"VENTA: score≤36 + SAR bajista ≥8 velas alcistas previas", enabled:true, fired:false, firedAt:null }
+  { id:53, ticker:"BG", type:"buy",  cond:"composite_buy",  scoreThreshold:null, condLabel:"COMPRA: score≥68 + SAR alcista ≥2 velas + franja ok", enabled:true, fired:false, firedAt:null },
+  { id:54, ticker:"BG", type:"sell", cond:"composite_sell", scoreThreshold:null, condLabel:"VENTA: score≤36 + SAR bajista ≥8 velas alcistas previas", enabled:true, fired:false, firedAt:null }
 ]);
   const [alarmModal,setAlarmModal] = useState(false);
   const [aForm,     setAForm     ] = useState({ticker:"UBER",type:"buy",cond:"score_high",scoreThreshold:70,sarCond:"bull",slotCond:"buy"});
