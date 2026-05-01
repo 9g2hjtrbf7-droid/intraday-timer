@@ -603,8 +603,14 @@ setPct(json.pct);
   return (
     <div style={{display:"flex",alignItems:"center",gap:10,flexWrap:"wrap",
       padding:"10px 16px",background:C.crm,borderBottom:"1px solid "+C.bor}}>
-      <span style={{fontSize:".44rem",letterSpacing:".18em",textTransform:"uppercase",
-        color:C.mut,flexShrink:0}}>Precio · {symbol}</span>
+<div style={{flexShrink:0}}>
+  <div style={{fontFamily:"'Barlow',sans-serif",fontSize:".95rem",fontWeight:800,
+    letterSpacing:"-.02em",color:C.ink,lineHeight:1}}>{symbol}</div>
+  <div style={{fontSize:".48rem",color:C.mut,marginTop:2,letterSpacing:".04em"}}>
+    {tickers[symbol]?.desc || symbol}
+  </div>
+</div>
+
 
       {status === "loading" && (
         <span style={{fontFamily:bold,fontSize:"1.5rem",fontWeight:800,color:C.mut,
