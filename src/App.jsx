@@ -572,10 +572,9 @@ function LivePrice({ symbol }) {
   async function fetchPrice() {
     try {
       // Direct Yahoo Finance fetch — works in Vercel (no CORS restrictions in production)
-      const res = await fetch(
-        `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=1m&range=1d`,
-        { headers: { "Accept": "application/json" } }
-      );
+      const res = await fetch(`/api/price?symbol=${symbol}`);
+
+  
       if (!res.ok) throw new Error("HTTP " + res.status);
       const json = await res.json();
       const meta = json.chart.result[0].meta;
