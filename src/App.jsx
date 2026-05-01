@@ -561,7 +561,8 @@ function TrendBar({label, value, max, color, unit=""}){
 
 
 // ── LIVE PRICE (Yahoo Finance — funciona en Vercel/producción) ───────────────
-function LivePrice({ symbol }) {
+function LivePrice({ symbol, tickerColor, tickers }) {
+
   const [price,  setPrice ] = useState(null);
   const [change, setChange] = useState(null);
   const [pct,    setPct   ] = useState(null);
