@@ -577,12 +577,10 @@ function LivePrice({ symbol }) {
   
       if (!res.ok) throw new Error("HTTP " + res.status);
       const json = await res.json();
-      const meta = json.chart.result[0].meta;
-      const p    = meta.regularMarketPrice;
-      const prev = meta.chartPreviousClose || meta.previousClose || p;
-      const ch   = parseFloat((p - prev).toFixed(2));
-      const pc   = parseFloat(((ch / prev) * 100).toFixed(2));
-      setPrice(p); setChange(ch); setPct(pc);
+      setPrice(json.price);
+setChange(json.change);
+setPct(json.pct);
+
       setTs(new Date().toLocaleTimeString("en-US", {
         hour:"2-digit", minute:"2-digit", timeZone:"America/New_York"
       }));
