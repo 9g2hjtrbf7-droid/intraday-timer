@@ -70,7 +70,8 @@ const KNOWN = {
   ADBE:{desc:"Adobe Inc.",beta:1.30,liq:"alta",sector:"tech",avgVol:4},
   CRM:{desc:"Salesforce Inc.",beta:1.25,liq:"alta",sector:"tech",avgVol:5},
   MA:{desc:"Mastercard Inc.",beta:1.05,liq:"alta",sector:"fintech",avgVol:4},
-  BG:{desc:"BG (activo genérico)",beta:1.20,liq:"media",sector:"general",avgVol:5},
+  BG:{desc:"Bunge Global SA",beta:0.85,liq:"media",sector:"agronegocios",avgVol:2},
+
   NKE:{desc:"Nike Inc.",beta:1.05,liq:"alta",sector:"consumer",avgVol:7},
   NFLX:{desc:"Netflix Inc.",beta:1.30,liq:"media",sector:"streaming",avgVol:4},
   META:{desc:"Meta Platforms Inc.",beta:1.22,liq:"alta",sector:"tech",avgVol:18},
