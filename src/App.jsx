@@ -561,8 +561,7 @@ function TrendBar({label, value, max, color, unit=""}){
 
 
 // ── LIVE PRICE (Yahoo Finance — funciona en Vercel/producción) ───────────────
-function LivePrice({ symbol, tickerColor, tickers }) {
-
+function LivePrice({ symbol }) {
   const [price,  setPrice ] = useState(null);
   const [change, setChange] = useState(null);
   const [pct,    setPct   ] = useState(null);
@@ -675,8 +674,7 @@ function DailyTrendPanel({ticker, tickerSymbol, et}){
   return(
     <div style={{background:C.sur,border:`2px solid ${C.ink}`,padding:18,marginBottom:12}}>
       {/* Live Price strip */}
-<LivePrice symbol={tickerSymbol} tickerColor={ticker.color} tickers={tickers}/>
-
+      <LivePrice symbol={tickerSymbol} tickerColor={ticker.color}/>
 
       {/* Header */}
       <div style={{fontSize:".46rem",letterSpacing:".2em",textTransform:"uppercase",color:C.mut,marginBottom:14,paddingBottom:8,marginTop:14,borderBottom:`1px solid ${C.bor}`}}>
