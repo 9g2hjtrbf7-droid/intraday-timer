@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#f4f1eb"/>
+  <text x="4" y="24" font-family="serif" font-size="22" font-weight="bold" fill="#18150f">I</text>
+  <rect x="14" y="8" width="14" height="16" rx="1" fill="#1b7f3a"/>
+  <text x="15" y="21" font-family="serif" font-size="14" font-weight="bold" fill="#f4f1eb">T</text>
+</svg>
