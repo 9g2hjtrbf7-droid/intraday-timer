@@ -674,7 +674,8 @@ function DailyTrendPanel({ticker, tickerSymbol, et}){
   return(
     <div style={{background:C.sur,border:`2px solid ${C.ink}`,padding:18,marginBottom:12}}>
       {/* Live Price strip */}
-      <LivePrice symbol={tickerSymbol} tickerColor={ticker.color}/>
+<LivePrice symbol={tickerSymbol} tickerColor={ticker.color} tickers={tickers}/>
+
 
       {/* Header */}
       <div style={{fontSize:".46rem",letterSpacing:".2em",textTransform:"uppercase",color:C.mut,marginBottom:14,paddingBottom:8,marginTop:14,borderBottom:`1px solid ${C.bor}`}}>
